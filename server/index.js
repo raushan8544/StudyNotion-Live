@@ -37,7 +37,10 @@ if (process.env.NODE_ENV !== 'production') {
 app.use(cookieParser());
 app.use(
     cors({
-        origin: "https://study-notion-live-three.vercel.app/",
+        origin: [
+      "http://localhost:3000",
+      "https://study-notion-live-three.vercel.app"
+    ],
         credentials: true,
     })
 )
